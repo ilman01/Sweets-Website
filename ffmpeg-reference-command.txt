@@ -1,0 +1,1 @@
+ffmpeg -i "INPUT" -qp 24 -c:a copy -hls_list_size 0 -hls_time 3 video.m3u8
