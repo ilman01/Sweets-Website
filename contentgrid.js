@@ -12,7 +12,7 @@ const contentgrid = `
         </div>
 
         <div class="col-lg-4 cell">
-            <div onclick="location.href='My-2023-Medley.html';" class="card clickable">
+            <div onclick="location.href='/video/My-2023-Medley.html';" class="card clickable">
                 <img src="/thumbnails/medley thumbnail - 2023.png" class="card-img-top" style="height: 360; width: 640;" alt="Thumbnail">
                 <div class="card-body">
                     <h5 class="card-title"><a class="search-title text-decoration-none text-black">My 2023 Medley</a></h5>
