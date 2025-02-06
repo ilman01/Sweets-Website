@@ -6,9 +6,6 @@ const head = `
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
     <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
-    <meta content="Sweet's Website" property="og:title" />
-    <meta content="Your go-to place for awesome content" property="og:description" />
-    <meta content="#336dff" data-react-helmet="true" name="theme-color" />
     <link rel="icon" type="image/x-icon" href="/logo.ico">
 `
 
