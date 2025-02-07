@@ -44,7 +44,8 @@
 
             cards.forEach(card => {
                 let title = card.querySelector(".search-title").innerText.toLowerCase();
-                if (title.includes(input)) {
+                let show = card.querySelector(".search-show").innerText.toLowerCase();
+                if (title.includes(input) || show.includes(input)) {
                     card.style.display = "block";
                 } else {
                     card.style.display = "none";
