@@ -1,3 +1,23 @@
 ffmpeg -i "INPUT" -qp 24 -c:a copy -hls_list_size 0 -hls_time 3 video.m3u8
 ffmpeg -i "INPUT" -vf scale=-1:720 -qp 24 -c:a copy -hls_list_size 0 -hls_time 3 video.m3u8
 ffmpeg -i "INPUT" -crf 20 -c:a copy -hls_list_size 0 -hls_time 3 video.m3u8
+
+
+
+
+
+
+
+
+Just incase you want to lol...
+
+ffmpeg -i "E:\Videos\AWB s2 1-7 songs\1080\Grow With Me.mp4" ^
+-map 0:v:0 -map 0:a:0 -map 0:v:0 -map 0:a:0 -map 0:v:0 -map 0:a:0 ^
+-c:v libx264 -c:a copy ^
+-filter:v:0 scale=w=640:h=480  -qp:v:0 28 ^
+-filter:v:1 scale=w=1280:h=720  -qp:v:1 25 ^
+-qp:v:2 23 ^
+-var_stream_map "v:0,a:0,name:480p v:1,a:1,name:720p v:2,a:2,name:1080p" ^
+-hls_list_size 0 -threads 0 -f hls -hls_playlist_type event -hls_time 3 ^
+-hls_flags independent_segments -master_pl_name "video.m3u8" ^
+"video-%v.m3u8"
