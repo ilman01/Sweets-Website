@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/headloader.js"></script>
+    <meta content="{site_name}" property="og:title" />
+    <meta content="{site_description}" property="og:description" />
+    <meta content="#336dff" data-react-helmet="true" name="theme-color" />
+    <style>
+        .clickable {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section id="header-below"></section>
+    <script src="/header.js"></script>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>{site_name}</h1>
+            <p>{site_description}</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-4">
+            <div class="input-group rounded">
+                <input type="text" id="searchInput" onkeyup="filterCards()" placeholder="Search Video..." class="form-control rounded">
+                <span class="input-group-text border-0">
+                    <i class="bi-search"></i>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="grid-below"></section>
+    <script src="/contentgrid.js"></script>
+
+    <script>
+        function filterCards() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let cards = document.querySelectorAll(".cell");
+
+            cards.forEach(card => {
+                let title = card.querySelector(".search-title").innerText.toLowerCase();
+                let show = card.querySelector(".search-show").innerText.toLowerCase();
+                if (title.includes(input) || show.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

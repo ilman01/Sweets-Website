@@ -1,0 +1,2 @@
+site_name : Sweet's Website
+site_description : Your go-to place for awesome content
