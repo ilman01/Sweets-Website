@@ -105,9 +105,12 @@ def favicon_builder():
 
 def video_html_builder():
     videos_data_pointer = file_lines_to_list("./video_post_data/1_order_of_data_videos_data_pointer")
+    left_side_site_configs_list, right_side_side_configs_list = parse_key_value_file_wrapped_curly_braces("site_configs.txt")
 
     for video_data_pointer in videos_data_pointer:
         left_side_data_list, right_side_data_list = parse_key_value_file_wrapped_curly_braces(f"./video_post_data/{video_data_pointer}")
+        left_side_data_list += left_side_site_configs_list
+        right_side_data_list += right_side_side_configs_list
         make_directory_if_hasnt(f"../video/{video_data_pointer}/")
         copy_and_replace("./templates/video_page.html", f"../video/{video_data_pointer}/index.html", left_side_data_list, right_side_data_list)
 
