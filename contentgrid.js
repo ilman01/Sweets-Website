@@ -32,6 +32,16 @@ const contentgrid = `
     </div>
 </div>
 <div class="col-lg-4 cell">
+    <div onclick="location.href='/video/Valentines-Day-Card/';" class="card clickable">
+        <img src="/thumbnails/Valentines-Day-Card.webp" class="card-img-top" style="height: 360; width: 640;" alt="Thumbnail">
+        <div class="card-body">
+            <h6 class="search-show text-muted fw-light">Fancy Nancy</h6>
+            <h5 class="card-title"><a class="search-title text-decoration-none text-black">Valentine's Day Card</a></h5>
+            <p class="card-text">Put your heart in a Valentine's Day Card!</p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 cell">
     <div onclick="location.href='/video/My-2023-Medley/';" class="card clickable">
         <img src="/thumbnails/My-2023-Medley.webp" class="card-img-top" style="height: 360; width: 640;" alt="Thumbnail">
         <div class="card-body">

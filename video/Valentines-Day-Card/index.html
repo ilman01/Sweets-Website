@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/headloader.js"></script>
+    <meta content="Valentine's Day Card" property="og:title" />
+    <meta content="Put your heart in a Valentine's Day Card!" property="og:description" />
+    <meta content="#336dff" data-react-helmet="true" name="theme-color" />
+    <style>
+        .video-placeholder {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section id="header-below"></section>
+    <script src="/header.js"></script>
+
+    <div class="container mt-4">
+        <!-- Video Section -->
+        <div class="video-placeholder">
+            <video
+                style="height: 100%; width: 100%;"
+                id="video-js"
+                class="video-js"
+                controls
+                preload="auto"
+                data-setup="{}"
+                playsinline
+            >
+            <source type="application/x-mpegURL" src="/m3u8/Valentines-Day-Card/video.m3u8" label="1080P" />
+            <track src="/subtitles/Valentines-Day-Card.vtt" kind="captions" srclang="en" label="English" default="true">
+            </video>
+        </div>
+    
+        <!-- Title & Description Section -->
+        <div class="mt-3">
+            <h6 class="text-muted fw-light">Fancy Nancy</h6>
+            <h3>Valentine's Day Card</h3>
+            <p>Put your heart in a Valentine's Day Card!</p>
+        </div>
+    </div>
+    
+    <hr>
+
+    <section id="grid-below"></section>
+    <script src="/contentgrid.js"></script>
+
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+    <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
+    
+    <script>
+        videojs('video-js', {}, function() {
+            var player = this;
+            player.controlBar.addChild('QualitySelector');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
